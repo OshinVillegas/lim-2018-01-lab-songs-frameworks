@@ -9,6 +9,8 @@ import { ApiService } from '../../service/api.service'
 export class MusicaComponent implements OnInit {
 
   BuscarArtista : string
+  toptracks : {}
+  track : [any]
 
   constructor( private _apiservice: ApiService) { }
 
@@ -18,7 +20,7 @@ export class MusicaComponent implements OnInit {
   }
 GetArtis(){
     this._apiservice.GetData(this.BuscarArtista).subscribe( (data:any)=>{
-      console.log(data)
+      console.log(data.toptracks.track)
     })
   } 
 }
