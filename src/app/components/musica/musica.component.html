@@ -1,7 +1,30 @@
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Recipient's username" [(ngModel)]="BuscarAtista"  name ="BuscarAtista" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input type="text" class="form-control" placeholder="Recipient's username" [(ngModel)]="BuscarArtista"  name ="BuscarArtista" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <div class="input-group-append">
     <button class="btn btn-dark" type="button" (click) ="GetArtis()" >Button</button>
   </div>
 </div>
+<div>
+  <img class= 'imag' src="{{imagen}}">
+    <table class="table">
+      
+        <thead class="thead-dark">
+          <tr>
+            <th class= 'hide' scope="col">#</th>
+            <th scope="col">Nombre de las canciones</th>
+            <th scope="col">Listeners</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let trackMusica of track">
+            <th scope="row"></th>
+            <td>{{trackMusica.name}}</td>   
+            <td>{{trackMusica.listeners}}</td>   
+          </tr>   
+        </tbody>
+      </table>
+
+</div>
+
+
 

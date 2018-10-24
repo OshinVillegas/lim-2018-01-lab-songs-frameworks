@@ -10,7 +10,8 @@ export class MusicaComponent implements OnInit {
 
   BuscarArtista : string
   toptracks : {}
-  track : [any]
+  track : any[]
+  imagen: string;
 
   constructor( private _apiservice: ApiService) { }
 
@@ -20,7 +21,12 @@ export class MusicaComponent implements OnInit {
   }
 GetArtis(){
     this._apiservice.GetData(this.BuscarArtista).subscribe( (data:any)=>{
-      console.log(data.toptracks.track)
+      this.track=data.toptracks.track;
+
+       this.imagen = data.toptracks.track[1].image[2]['#text'] 
+      console.log(data);     
+      console.log(this.track); 
+  
     })
   } 
 }
