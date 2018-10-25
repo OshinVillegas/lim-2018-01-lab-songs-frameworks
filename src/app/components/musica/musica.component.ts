@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service'
+import { EventListener } from '@angular/core/src/debug/debug_node';
 
 @Component({
   selector: 'app-musica',
@@ -29,4 +30,10 @@ GetArtis(){
   
     })
   } 
+Likes(){
+  let contador = 0;
+  addEventListener
+console.log(contador)
+};
+  
 }

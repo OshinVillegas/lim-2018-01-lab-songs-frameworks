@@ -13,13 +13,18 @@
             <th class= 'hide' scope="col">#</th>
             <th scope="col">Nombre de las canciones</th>
             <th scope="col">Listeners</th>
+            <th>Like</th>
+            <th>DisLike</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let trackMusica of track">
             <th scope="row"></th>
             <td>{{trackMusica.name}}</td>   
-            <td>{{trackMusica.listeners}}</td>   
+            <td>{{trackMusica.listeners}}</td> 
+            <td><button (click)="Likes()">Click me: 0</button></td>
+            <td><button >Click me: 0</button></td>   
+
           </tr>   
         </tbody>
       </table>
